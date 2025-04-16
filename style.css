@@ -10,7 +10,7 @@
     --gradient-color-red: linear-gradient(90deg, hsl(7, 89%, 46%) 15%, hsl(11, 93%, 68%) 100%);
     --gradient-color-orange: linear-gradient(90deg, hsl(22, 89%, 46%) 15%, hsl(54, 90%, 68%) 100%);
     --gradient-color-yellow: linear-gradient(90deg, hsl(54, 89%, 46%) 15%, hsl(92, 90%, 45%) 100%);
-    --gradient-color-green: linear-gradient(hsl(92, 89%, 46%) 15%, hsl(92, 90%, 68%) 100%);
+    --gradient-color-green: linear-gradient(90deg, hsl(92, 89%, 46%) 15%, hsl(92, 90%, 68%) 100%);
 }
 
 body {
@@ -55,7 +55,7 @@ body {
 }
 
 .Bstatus i {
-    font-size: 1.25rem;
+    font-family: 1.25rem;
 }
 
 .Bpill {
@@ -78,7 +78,7 @@ body {
 .Bliquid {
     position: absolute;
     bottom: 0;
-    left: 9;
+    left: 0;
     right: 0;
     height: 36px;
     background: var(--gradient-color-red);
@@ -90,7 +90,7 @@ body {
     content: "";
     position: absolute;
     height: 8px;
-    box-shadow: inset 0 03px 6px hsla(0, 0%, 0%, 0.2);
+    box-shadow: inset 0 -3px 6px hsla(0, 0%, 0%, 0.2);
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -112,9 +112,7 @@ body {
     animation: animated-low 1.2s infinite alternate;
 }
 
-.animated-green,
-.animated-red,
-.green-color {
+.animated-green, .animated-red, .green-color {
     --webkit-background-clip: text;
     color: transparent;
 }
@@ -123,7 +121,6 @@ body {
     0% {
         text-shadow: none;
     }
-
     100% {
         text-shadow: 0 0 6px hsl(92, 90%, 68%);
     }
@@ -133,28 +130,23 @@ body {
     0% {
         text-shadow: none;
     }
-
     100% {
         text-shadow: 0 0 8px hsl(7, 89%, 46%);
     }
 }
 
-.gradient-color-red,
-.green-color-red::after {
+.gradient-color-red, .green-color-red::after {
     background: var(--gradient-color-red);
 }
 
-.gradient-color-green,
-.green-color-green::after {
+.gradient-color-green, .green-color-green::after {
     background: var(--gradient-color-green);
 }
 
-.gradient-color-orange,
-.green-color-orange::after {
+.gradient-color-orange, .green-color-orange::after {
     background: var(--gradient-color-orange);
 }
 
-.gradient-color-yellow,
-.green-color-yellow::after {
+.gradient-color-yellow, .green-color-yellow::after {
     background: var(--gradient-color-yellow);
 }
